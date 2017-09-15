@@ -1,12 +1,6 @@
 <template>
   <div class="vdp-datepicker" :class="[wrapperClass, isRtl ? 'rtl' : '']">
     <div :class="{'input-group' : bootstrapStyling}">
-      <!-- Calendar Button -->
-      <span class="vdp-datepicker__calendar-button" :class="{'input-group-addon' : bootstrapStyling}" v-if="calendarButton" @click="showCalendar">
-        <i :class="calendarButtonIcon">
-          <span v-if="calendarButtonIcon.length === 0">&hellip;</span>
-        </i>
-      </span>
       <label v-if="name" v-bind:for="name" v-text="name" class="ui label"></label>
       <!-- Input -->
       <input
@@ -24,6 +18,12 @@
         :disabled="disabledPicker"
         :required="required"
         v-mask="'##/##/####'">
+      <!-- Calendar Button -->
+      <span class="vdp-datepicker__calendar-button" :class="{'input-group-addon' : bootstrapStyling}" v-if="calendarButton" @click="showCalendar">
+        <i :class="calendarButtonIcon">
+          <span v-if="calendarButtonIcon.length === 0">&hellip;</span>
+        </i>
+      </span>
       <!-- Clear Button -->
       <span class="vdp-datepicker__clear-button" :class="{'input-group-addon' : bootstrapStyling}" v-if="clearButton && selectedDate" @click="clearDate()">
         <i :class="clearButtonIcon">
