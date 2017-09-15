@@ -19,10 +19,8 @@
         :required="required"
         v-mask="'##/##/####'">
       <!-- Calendar Button -->
-      <span class="vdp-datepicker__calendar-button" :class="{'input-group-addon' : bootstrapStyling}" v-if="calendarButton" @click="showCalendar">
-        <i :class="calendarButtonIcon">
-          <span v-if="calendarButtonIcon.length === 0">&hellip;</span>
-        </i>
+      <span class="input-group-btn" v-if="calendarButton">
+        <button class="btn btn-secondary" type="button">Go!</button>
       </span>
       <!-- Clear Button -->
       <span class="vdp-datepicker__clear-button" :class="{'input-group-addon' : bootstrapStyling}" v-if="clearButton && selectedDate" @click="clearDate()">
