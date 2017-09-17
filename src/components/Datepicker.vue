@@ -1,6 +1,6 @@
 <template>
   <div class="vdp-datepicker vdp-datepicker-margin-top" :class="[wrapperClass, isRtl ? 'rtl' : '']">
-    <div class="vdp-datepicker-input-calendar">
+    <div>
       <label v-if="name" v-bind:for="name" v-text="name" class="ui label"></label>
       <!-- Input -->
       <input
@@ -804,6 +804,10 @@ $width = 300px
 .rtl
     direction:rtl
 .vdp-datepicker
+    border-radius: 5px
+    border: 1px solid #ccc
+    padding: 7px 8px
+    margin-right: 10px
     position relative
     text-align left
     *
@@ -811,12 +815,6 @@ $width = 300px
 
 .vdp-datepicker-margin-top
   margin-top: 10px
-
-.vdp-datepicker-input-calendar
-  border-radius: 5px
-  border: 1px solid #ccc
-  padding: 7px 8px
-  margin-right: 10px
 
 .vdp-datepicker__calendar
     position absolute
