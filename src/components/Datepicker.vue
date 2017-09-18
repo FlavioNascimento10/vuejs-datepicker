@@ -1,6 +1,6 @@
 <template>
-  <div class="vdp-datepicker vdp-datepicker-margin-top" :class="[wrapperClass, isRtl ? 'rtl' : '']">
-    <div>
+  <div class="vdp-datepicker" :class="[wrapperClass, isRtl ? 'rtl' : '']">
+    <div :class="{'input-group' : bootstrapStyling}">
       <label v-if="name" v-bind:for="name" v-text="name" class="ui label"></label>
       <!-- Input -->
       <input
@@ -10,6 +10,7 @@
         :id="id"
         ref="inputdatepicker"
         @keyup="updateDate"
+        @focus=""
         @blur="onBlur"
         :value="formattedValue"
         :placeholder="placeholder"
@@ -19,7 +20,6 @@
         v-mask="'##/##/####'">
       <!-- Calendar Button -->
       <span class=".vdp-datepicker__calendar-button" :class="{'input-group-addon' : bootstrapStyling}"  @click="showCalendar">
-        <button class="btn btn-secondary" type="button">Go!</button>
         <i :class="calendarButtonIcon">
           <span v-if="calendarButtonIcon.length === 0">&times;</span>
         </i>
@@ -804,17 +804,10 @@ $width = 300px
 .rtl
     direction:rtl
 .vdp-datepicker
-    border-radius: 5px
-    border: 1px solid #ccc
-    padding: 7px 8px
-    margin-right: 10px
     position relative
     text-align left
     *
         box-sizing border-box
-
-.vdp-datepicker-margin-top
-  margin-top: 10px
 
 .vdp-datepicker__calendar
     position absolute
