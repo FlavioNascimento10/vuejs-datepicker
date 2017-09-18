@@ -10,6 +10,7 @@
         :id="id"
         ref="inputdatepicker"
         @keyup="updateDate"
+        @focus="hideCalendar"
         @blur="onBlur"
         :value="formattedValue"
         :placeholder="placeholder"
@@ -367,6 +368,9 @@ export default {
         return this.close()
       }
       this.setInitialView()
+    },
+    hideCalendar () {
+      return this.close()
     },
     setInitialView () {
       switch (this.initialView) {
