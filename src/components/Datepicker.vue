@@ -10,7 +10,6 @@
         :id="id"
         ref="inputdatepicker"
         @keyup="updateDate"
-        @focus=""
         @blur="onBlur"
         :value="formattedValue"
         :placeholder="placeholder"
