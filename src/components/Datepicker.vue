@@ -10,9 +10,7 @@
         :id="id"
         ref="inputdatepicker"
         @keyup="updateDate"
-        @focus="hideCalendar"
-        @click="hideCalendar"
-        @input="hideCalendar"
+        @focus=""
         @blur="onBlur"
         :value="formattedValue"
         :placeholder="placeholder"
@@ -21,7 +19,7 @@
         :required="required"
         v-mask="'##/##/####'">
       <!-- Calendar Button -->
-      <span class="vdp-datepicker__calendar-button" :class="{'input-group-addon' : bootstrapStyling}"  @click="showCalendar">
+      <span class="vdp-datepicker__calendar-button" :class="{'input-group-addon' : bootstrapStyling}" >
         <i :class="calendarButtonIcon">
           <span v-if="calendarButtonIcon.length === 0">&times;</span>
         </i>
