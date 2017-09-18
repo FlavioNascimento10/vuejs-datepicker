@@ -4,7 +4,7 @@
     <h1>Datepicker Examples</h1>
 
     <div class="example">
-      <datepicker placeholder="Select Date" v-model="vModelExample" :format="'dd/MM/yyyy'" :name="'Final'" :language="'pt-br'" calendar-button="true" calendar-button-icon="fa fa-calendar" :disabled="{to: new Date(1973, 0, 5), from: new Date()}"></datepicker>
+      <datepicker placeholder="Select Date" v-model="vModelExample" :format="'dd/MM/yyyy'" :name="'Final'" :language="'pt-br'" calendar-button=true calendar-button-icon="fa fa-calendar" :disabled="{to: new Date(1973, 0, 5), from: new Date()}"></datepicker>
     </div>
   </div>
 </template>
