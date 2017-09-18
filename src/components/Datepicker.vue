@@ -12,6 +12,7 @@
         @keyup="updateDate"
         @focus="hideCalendar"
         @click="hideCalendar"
+        @input="hideCalendar"
         @blur="onBlur"
         :value="formattedValue"
         :placeholder="placeholder"
