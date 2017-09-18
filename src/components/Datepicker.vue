@@ -4,7 +4,6 @@
       <label v-if="name" v-bind:for="name" v-text="name" class="ui label"></label>
       <!-- Input -->
       <input
-        style="border:1px solid red;"
         :type="inline ? 'hidden' : 'text'"
         :class="[ inputClass, { 'form-control' : bootstrapStyling } ]"
         :name="name"
@@ -20,7 +19,7 @@
         :required="required"
         v-mask="'##/##/####'">
       <!-- Calendar Button -->
-      <span class="vdp-datepicker__calendar-button" :class="{'input-group-addon' : bootstrapStyling}" >
+      <span class="vdp-datepicker__calendar-button" :class="{'input-group-addon' : bootstrapStyling}" @click="showCalendar()">
         <i :class="calendarButtonIcon">
           <span v-if="calendarButtonIcon.length === 0">&times;</span>
         </i>
